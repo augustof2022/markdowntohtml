@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Markdown to HTML Converter</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Include Marked.js library from a CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <!-- Defer loading our script until HTML is parsed -->
+    <script src="app.js" defer></script>
+</head>
+<body>
+    <h1>Convert Markdown to HTML</h1>
+    <p>Paste or type your markdown and see it rendered as HTML. Customize the preview with CSS.</p>
+
+    <div class="container">
+        <div class="column input-column">
+            <div class="input-area">
+                <h2>Enter Markdown</h2>
+                <textarea id="markdown-input" rows="20" placeholder="Type your Markdown here..."></textarea>
+            </div>
+            <div class="input-area">
+                <h2>Custom CSS</h2>
+                <textarea id="css-input" rows="15" placeholder="Type your custom CSS rules here..."></textarea>
+                <p class="info">CSS will be saved in your browser's local storage.</p>
+            </div>
+        </div>
+
+        <div class="column output-column">
+            <h2>HTML Preview</h2>
+            <div id="html-preview">
+                <!-- Rendered HTML will appear here -->
+            </div>
+             <!-- Optional: Add a section for Raw HTML output if needed -->
+            <!--
+            <h2>Raw HTML Output</h2>
+            <textarea id="raw-html-output" rows="15" readonly></textarea>
+            -->
+        </div>
+    </div>
+
+</body>
+</html>
