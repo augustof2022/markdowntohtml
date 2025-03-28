@@ -1,0 +1,165 @@
+/* Basic Reset & Body Styling */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: sans-serif;
+    line-height: 1.6;
+    padding: 20px;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+h1, h2 {
+    margin-bottom: 10px;
+    color: #555;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+p {
+    margin-bottom: 15px;
+}
+
+.info {
+    font-size: 0.85em;
+    color: #666;
+    margin-top: 5px;
+}
+
+/* Layout Container */
+.container {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    gap: 20px; /* Space between columns */
+}
+
+/* Columns */
+.column {
+    flex: 1; /* Each column takes equal space */
+    min-width: 300px; /* Minimum width before wrapping */
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.input-area {
+    margin-bottom: 20px;
+}
+
+/* Textareas */
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.95em;
+    line-height: 1.4;
+    margin-top: 5px;
+    resize: vertical; /* Allow vertical resizing */
+}
+
+#markdown-input {
+    min-height: 300px; /* Ensure a decent starting height */
+}
+
+#css-input {
+     min-height: 200px;
+}
+
+
+/* HTML Preview Area */
+#html-preview {
+    border: 1px solid #ccc;
+    padding: 15px;
+    background-color: #fdfdfd;
+    min-height: 400px; /* Give it some visible space */
+    overflow-y: auto; /* Add scrollbar if content overflows */
+    border-radius: 4px;
+}
+
+/* Basic styling for elements *within* the preview */
+#html-preview h1,
+#html-preview h2,
+#html-preview h3,
+#html-preview h4,
+#html-preview h5,
+#html-preview h6 {
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+    color: #333; /* Ensure default color is readable */
+}
+
+#html-preview p {
+    margin-bottom: 1em;
+}
+
+#html-preview ul,
+#html-preview ol {
+    margin-left: 2em;
+    margin-bottom: 1em;
+}
+
+#html-preview li {
+    margin-bottom: 0.3em;
+}
+
+
+#html-preview pre {
+    background-color: #eee;
+    padding: 10px;
+    border-radius: 4px;
+    overflow-x: auto;
+    margin-bottom: 1em;
+}
+
+#html-preview code {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #eee; /* Slight background for inline code */
+    padding: 0.2em 0.4em;
+    border-radius: 3px;
+}
+
+#html-preview pre code {
+    background-color: transparent; /* Avoid double background in code blocks */
+    padding: 0;
+}
+
+#html-preview blockquote {
+    border-left: 4px solid #ccc;
+    padding-left: 1em;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 1em;
+    color: #666;
+}
+
+#html-preview table {
+    border-collapse: collapse;
+    margin-bottom: 1em;
+    width: auto; /* Or 100% if you prefer */
+}
+
+#html-preview th,
+#html-preview td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: left;
+}
+
+#html-preview th {
+    background-color: #f2f2f2;
+}
+
+#html-preview img {
+    max-width: 100%; /* Prevent images from overflowing */
+    height: auto;
+}
