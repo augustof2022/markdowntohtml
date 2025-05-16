@@ -12,31 +12,42 @@
 </head>
 <body>
     <h1>Convert Markdown to HTML</h1>
-    <p>Paste or type your markdown and see it rendered as HTML. Customize the preview with CSS.</p>
+    <p>Paste markdown, see HTML, apply custom CSS profiles to the preview.</p>
 
     <div class="container">
         <div class="column input-column">
             <div class="input-area">
                 <h2>Enter Markdown</h2>
-                <textarea id="markdown-input" rows="20" placeholder="Type your Markdown here..."></textarea>
+                <textarea id="markdown-input" rows="18" placeholder="Type your Markdown here..."></textarea>
             </div>
             <div class="input-area">
-                <h2>Custom CSS</h2>
-                <textarea id="css-input" rows="15" placeholder="Type your custom CSS rules here..."></textarea>
-                <p class="info">CSS will be saved in your browser's local storage.</p>
+                <h2>Custom CSS (for Preview)</h2>
+                <textarea id="css-input" rows="12" placeholder="CSS rules for the HTML preview ONLY..."></textarea>
+
+                <!-- CSS Profile Management Section -->
+                <div class="profile-controls">
+                    <div class="profile-load">
+                        <label for="css-profile-select">Load Profile:</label>
+                        <select id="css-profile-select">
+                            <option value="">-- Select Profile --</option>
+                            <!-- Profiles will be loaded here by JS -->
+                        </select>
+                        <button id="delete-css-profile-button" title="Delete Selected Profile">🗑️</button>
+                    </div>
+                    <div class="profile-save">
+                        <label for="css-profile-name-input">Save as:</label>
+                        <input type="text" id="css-profile-name-input" placeholder="New Profile Name">
+                        <button id="save-css-profile-button">Save Current CSS</button>
+                    </div>
+                </div>
+                 <p class="info">CSS profiles apply only to the preview window.</p>
             </div>
         </div>
 
         <div class="column output-column">
             <h2>HTML Preview</h2>
-            <div id="html-preview">
-                <!-- Rendered HTML will appear here -->
-            </div>
-             <!-- Optional: Add a section for Raw HTML output if needed -->
-            <!--
-            <h2>Raw HTML Output</h2>
-            <textarea id="raw-html-output" rows="15" readonly></textarea>
-            -->
+            <!-- Use an iframe instead of a div for isolation -->
+            <iframe id="preview-iframe" title="HTML Preview Pane" frameborder="0"></iframe>
         </div>
     </div>
 
